@@ -5,12 +5,11 @@
 ## Project Description: ##
 The client is a manufacture of injectable pharmaceutical packaging and delivery systems.  It also provides analytical services for analyze performance of packaging/delivery systems. As the company expands its business globally, it needs to upgrade its existing web application into microservices.
 
-This project built a customer portal that allows customers to place orders, submit requests for analytical services. The Enterprise Resource Planning System also allows the company to easily manage its orders, customers, logistics and warehouse. 
-
+This project built a customer portal that allows customers to place orders, submit requests for analytical services. It also allows the company to easily manage its orders, customers, logistics and warehouse. This project serves as an Enterprise Resource Planning(ERP) System for the client company.
 
 ## Existing System: ##
 
-The existing system is built in monolithic architecture, which is difficult to scale, and prone to single point failure.
+The existing system is built in monolithic architecture, which is difficult to scale, and prone to single point failure. Our team took out the business logic, and redesigned database, User Interface, and backend web services. Migrating the existing system to microservices not only improves the performance of the system, but also allow us to add new features that the client company demands. 
 
 ## Software Selection: ##
 *Backend:*
@@ -32,6 +31,10 @@ The existing system is built in monolithic architecture, which is difficult to s
 *Test-driven-development:*
 
     JUnit 5, Mockito 3.3.0.
+ 
+*AWS Cloud:*
+
+    AWS EC2
 
 ## Backend Microservice sub-modules: ##
 **admin:** Provides RestAPIs for the admin to login, add, remove other authorized users, do relevant database CRUD operations on MySQL admin table.
@@ -47,3 +50,7 @@ The existing system is built in monolithic architecture, which is difficult to s
 **financial management:** Provides RestAPIs for the company to to view financial reports.
 
 **client services:** Provides RestAPIs for customer to register, sign-in, place order on products, or analytical services, access past-order page. Implement a RabbitMQ publisher that sends message to order service.
+
+## Instructions on How to Run/test ##
+Run the backend SpringBoot project.
+Run the frontend Angular project with Angular CLI/NodeJS.
